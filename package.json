@@ -1,0 +1,18 @@
+{
+  "name": "joshterrell.com",
+  "version": "0.0.0-0",
+  "repository": "joshterrell805/joshterrell.com",
+  "dependencies": {
+    "underscore": "~1.7.0",
+    "marked": "~0.3.2",
+    "debug": "~1.0.4",
+    "promise": "~5.0.0",
+    "googleapis": "~1.0.21",
+    "csrf": "~2.0.2",
+    "cookie": "~0.1.2",
+    "mysql": "~2.5.3",
+    "ExtendableError": "git://github.com/joshterrell805/ExtendableError.git",
+    "blueimp-md5": "git://github.com/joshterrell805/JavaScript-MD5.git",
+    "jugglypuff": "git://github.com/joshterrell805/jugglypuff.git"
+  }
+}
