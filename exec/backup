@@ -1,0 +1,4 @@
+#!/bin/bash
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+timestamp=`$DIR/timestamp`
+mysqldump --opt -u admin -p joshterrell_com > ~/joshterrell.com-backups/$timestamp

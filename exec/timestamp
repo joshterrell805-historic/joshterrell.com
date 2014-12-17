@@ -1,0 +1,30 @@
+#!/bin/bash
+
+if [[ "$1" == '-h' || "$1" == '--help' ]];
+then
+   echo "
+Usage: timestamp [[-to | -from] value]
+
+no args: get a unix timestamp for now.
+
+to: convert \`value\` from \"YYYY-MM-DD HH:MM:SS (A|P)M [ZONE]\" to a utc timestamp.
+from: convert \`value\` from utc timestamp to \"YYYY-MM-DD HH:MM:SS (A|P)M\" (utc).
+"
+else
+   if [[ "$1" == '-from' || "$1" == '-to' ]];
+   then
+      direction="$1"
+      value="$2"
+   else
+      date "+%s"
+      exit
+   fi
+
+   if [[ $direction == '-to' ]];
+   then
+      date -d "$value" "+%s"
+   else
+      date -d "@$value" "+%F %r"
+   fi;
+fi
+
