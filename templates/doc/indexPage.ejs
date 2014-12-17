@@ -1,0 +1,18 @@
+<div class='index row small-11 small-centered columns'>
+  <h1 class='title'>Documents</h1>
+  <div class='body'>
+    <table>
+    <% for (var i = 0; i < data.index.length; ++i ) {
+      var ent = data.index[i]; %>
+      <tr>
+        <td><h4>
+          <a class='title' href='<%- ent.url %>'><%- ent.title %></a>
+        </h4></td>
+        <td>
+          <span class='timestamp' data-timestamp='<%- ent.timestamp %>'></span>
+        </td>
+      </tr>
+    <% } %>
+    <table>
+  </div>
+</div>
