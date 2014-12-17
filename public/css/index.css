@@ -5,11 +5,16 @@
   #content > .index *:last-child {
     margin-bottom: 0 !important; }
   #content > .index .title {
-    text-align: center; }
-  #content > .index .post-synopsis {
-    margin-bottom: 1.2rem; }
-  #content > .index .recent-posts {
-    padding: 1em; }
-  #content > .index .posts {
-    background-color: rgba(100, 100, 100, 0.2);
-    padding: 0.7rem 0.7rem; }
+    display: none; }
+  #content > .index .timestamps {
+    display: none; }
+  #content > .index .body {
+    margin: 2rem; }
+    #content > .index .body li .title {
+      text-decoration: underline; }
+    #content > .index .body > ul {
+      margin-left: 3rem; }
+  #content > .index p.top-link {
+    display: none; }
+  #content > .index *:last-child {
+    margin-bottom: 0; }
