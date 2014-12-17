@@ -13,13 +13,7 @@ Responder.prototype.methods = {
   'GET': function* GET() {
     var title = Doc.pathnameToTitle(this.req.pathname);
 
-    // TODO move this to own responder.
-    if (title === 'new' && this.session) {
-      var doc = yield Doc.create();
-      return this.redirect('303', doc.title);
-    } else {
-      var doc = yield Doc.findByTitle(title);
-    }
+    var doc = yield Doc.findByTitle(title);
 
     if (!doc || (doc.private && !this.session)) {
       this.setStatusCode('404');
