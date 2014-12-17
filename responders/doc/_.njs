@@ -1,7 +1,7 @@
 module.exports = Responder;
 
 var Doc = lib('Content/Doc'),
-    debug = require('debug')('BaseSite:responders:doc:_');
+    debug = require('debug')('jt:responders:doc:_');
 
 function Responder() {
   GuiResponder.apply(this, arguments);
@@ -13,6 +13,7 @@ Responder.prototype.methods = {
   'GET': function* GET() {
     var title = Doc.pathnameToTitle(this.req.pathname);
 
+    // TODO move this to own responder.
     if (title === 'new' && this.session) {
       var doc = yield Doc.create();
       return this.redirect('303', doc.title);
