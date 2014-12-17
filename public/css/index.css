@@ -1,0 +1,15 @@
+#content > .index {
+  border: 0.2rem solid #300;
+  background-color: rgba(10, 10, 10, 0.7);
+  padding: 1.4rem; }
+  #content > .index *:last-child {
+    margin-bottom: 0 !important; }
+  #content > .index .title {
+    text-align: center; }
+  #content > .index .post-synopsis {
+    margin-bottom: 1.2rem; }
+  #content > .index .recent-posts {
+    padding: 1em; }
+  #content > .index .posts {
+    background-color: rgba(100, 100, 100, 0.2);
+    padding: 0.7rem 0.7rem; }
