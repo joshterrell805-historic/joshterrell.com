@@ -96,7 +96,7 @@ function updateBackend() {
 
   doc.old_hash = doc.hash;
   doc.category = null;
-  doc.title = $('#editor > .title').html();
+  doc.title = $('#editor > .title').text();
   doc.private = doc.private;
   doc.body = editor.getDoc().getValue();
   doc.hash = md5(doc.title + doc.body + (doc.category?doc.category:'NULL') +

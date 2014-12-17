@@ -12,6 +12,7 @@ Responder.prototype = Object.create(GuiResponder.prototype);
 Responder.prototype.methods = {
   'GET': function* GET() {
     var title = Doc.pathnameToTitle(this.req.pathname);
+    title = decodeURIComponent(title);
 
     var doc = yield Doc.findByTitle(title);
 

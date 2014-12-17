@@ -1,12 +1,12 @@
-<a href="<%- data.title %>"><h1 class='title'><%- data.title %></h1></a>
+<a href="<%- encodeURIComponent(data.title) %>"><h1 class='title'><%- data.title %></h1></a>
 <% if (data.category) { %>
   <div class='category'><%- data.category %></div>
 <% } %>
 <div class='timestamps text-center'><div>Published:
-  <span class='timestamp' data-timestamp='<%- data.publish_ts %>'></span>
+  <span class='timestamp' data-timestamp='<%= data.publish_ts %>'></span>
   <% if (data.edit_ts) { %>
     </div><div>Edited:
-    <span class='timestamp' data-timestamp='<%- data.edit_ts %>'></span>
+    <span class='timestamp' data-timestamp='<%= data.edit_ts %>'></span>
   <% } %>
   </div></div>
 <div class='body'><%= data.body %></div>
