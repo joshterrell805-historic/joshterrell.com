@@ -1,0 +1,15 @@
+<div class='doc row small-11 small-centered columns'>
+  <% if (data.notFound) { %>
+    <h1 class='title'>Document Not Found</h1>
+    <div class='body'><p>The document you requested was not found.</p></div>
+  <% } else { %>
+    <script>window.doc=<%= data.doc %>;</script>
+    <div id="view">
+      <%= renderTemplate('/doc/doc', data) %>
+    </div>
+    <div id="editor" class="hidden">
+      <h1 contentEditable='true' class='title'><%- data.title %></h1>
+      <form><textarea id="code" name="code"></textarea></form>
+    </div>
+  <% } %>
+</div>
