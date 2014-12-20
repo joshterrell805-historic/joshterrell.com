@@ -77,8 +77,7 @@ function edit() {
   $('#editor').removeClass('hidden');
   PageActions.disable('edit');
   PageActions.enable('view');
-  editor.refresh();
-  editor.focus();
+
   $('#content').addClass('rem-height-100');
   $('#header').addClass('rem-height-auto');
   $('body').addClass('rem-height-container');
@@ -88,6 +87,9 @@ function edit() {
   $('#editor > .title').addClass('rem-height-auto');
   $('#editor > .CodeMirror').addClass('rem-height-100');
   $(window).trigger('resize');
+
+  editor.refresh();
+  editor.focus();
 }
 function view() {
   $('#editor').addClass('hidden');
