@@ -45,12 +45,15 @@ table {
      width: 100%;
      td:nth-child(1) {
        text-align: left;
+       width: 33.33%;
      }
      td:nth-child(2) {
        text-align: center;
+       width: 33.33%;
      }
      td:nth-child(3) {
        text-align: right;
+       width: 33.33%;
      }
    }
 

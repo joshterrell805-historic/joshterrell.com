@@ -29,11 +29,14 @@ table {
   #header > table {
     width: 100%; }
     #header > table td:nth-child(1) {
-      text-align: left; }
+      text-align: left;
+      width: 33.33%; }
     #header > table td:nth-child(2) {
-      text-align: center; }
+      text-align: center;
+      width: 33.33%; }
     #header > table td:nth-child(3) {
-      text-align: right; }
+      text-align: right;
+      width: 33.33%; }
   #header .page-actions {
     white-space: nowrap; }
     #header .page-actions .page-action.hidden {
