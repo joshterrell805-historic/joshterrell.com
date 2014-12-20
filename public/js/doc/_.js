@@ -27,6 +27,7 @@ window.editor = CodeMirror.fromTextArea(
   matchBrackets: true,
   showCursorWhenSelecting: true,
   autofocus: true,
+  lineWrapping: true,
   theme: "twilight",
 });
 window.editor.getDoc().on('change', updateBackend);
@@ -72,19 +73,33 @@ function deleteDoc() {
   }
 }
 function edit() {
-
   $('#view').addClass('hidden');
   $('#editor').removeClass('hidden');
   PageActions.disable('edit');
   PageActions.enable('view');
   editor.refresh();
   editor.focus();
+  $('#content').addClass('rem-height-100');
+  $('#header').addClass('rem-height-auto');
+  $('body').addClass('rem-height-container');
+  $('#content > .doc').css('height', '100%');
+
+  $('#editor').addClass('rem-height-container');
+  $('#editor > .title').addClass('rem-height-auto');
+  $('#editor > .CodeMirror').addClass('rem-height-100');
+  $(window).trigger('resize');
 }
 function view() {
   $('#editor').addClass('hidden');
   $('#view').removeClass('hidden');
   PageActions.disable('view');
   PageActions.enable('edit');
+  $('#content').removeClass('rem-height-100');
+  $('#header').removeClass('rem-height-auto');
+  $('body').removeClass('rem-height-container');
+  $('#content > .doc').css('height', '');
+  $('#doc').css('height', '');
+  $('#content').css('height', '');
 }
 
 

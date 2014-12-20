@@ -1,5 +1,5 @@
 #content > .doc {
-  border: 0.2rem solid #300;
+  position: relative;
   background-color: rgba(10, 10, 10, 0.7);
   padding: 1.4rem; }
   #content > .doc .timestamps {
@@ -9,15 +9,21 @@
     display: none; }
   #content > .doc .title {
     text-align: center; }
-  #content > .doc .body {
+  #content > .doc #view img {
+    width: 49%;
+    margin: 0;
+    padding: 1rem 1rem; }
+  #content > .doc #view li .title {
+    text-decoration: underline; }
+  #content > .doc #view > ul {
+    margin-left: 3rem; }
+  #content > .doc #view .body {
     margin: 2rem; }
-    #content > .doc .body #view img {
-      width: 49%;
-      margin: 0;
-      padding: 1rem 1rem; }
-    #content > .doc .body #view li .title {
-      text-decoration: underline; }
-    #content > .doc .body #view > ul {
-      margin-left: 3rem; }
+  #content > .doc #editor {
+    top: 1.4rem;
+    bottom: 1.4rem;
+    left: 1.4rem;
+    right: 1.4rem;
+    position: absolute; }
   #content > .doc *:last-child {
     margin-bottom: 0; }

@@ -1,57 +1,48 @@
 html {
-  background-image: url("https://liftforsmiles.files.wordpress.com/2014/08/18750-weight-bar-gym-workout.jpg");
+  background-image: url("https://liftforsmiles.files.wordpress.com/2014/09/315lbs-platform.jpg");
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; }
 
-#header, #content:before {
-  height: 4rem;
-  border-width: 0 0 0.2rem 0;
-  border-style: solid; }
+table {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background-color: transparent; }
+  table td {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    background-color: transparent; }
 
 #header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: black;
-  border-color: #300;
-  z-index: 1; }
+  background-color: rgba(10, 10, 10, 0.7); }
   #header * {
     margin: 0; }
-  #header .title {
-    position: absolute;
-    top: 50%;
-    left: 1rem;
-    transform: translate(0, -50%);
-    -moz-transform: translate(0, -50%);
-    -webkit-transform: translate(0, -50%); }
-  #header .user {
-    position: absolute;
-    top: 50%;
-    right: 1rem;
-    transform: translate(0, -50%);
-    -moz-transform: translate(0, -50%);
-    -webkit-transform: translate(0, -50%); }
-    #header .user #google-plus-signin {
-      background-color: transparent;
-      border: 0px;
-      width: 120px;
-      padding: 0px;
-      height: 40px; }
+  #header .user #google-plus-signin {
+    background-color: transparent;
+    border: 0px;
+    width: 120px;
+    padding: 0px;
+    height: 40px; }
+  #header > table {
+    width: 100%; }
+    #header > table td:nth-child(1) {
+      text-align: left; }
+    #header > table td:nth-child(2) {
+      text-align: center; }
+    #header > table td:nth-child(3) {
+      text-align: right; }
   #header .page-actions {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%); }
+    white-space: nowrap; }
     #header .page-actions .page-action.hidden {
       display: none; }
+    #header .page-actions .page-action:hover {
+      background-color: #400; }
     #header .page-actions .page-action {
       box-sizing: content-box;
-      border: 0.2rem solid #300;
+      border: 0.2rem solid transparent;
       margin: 0 0.25rem;
       width: 32px;
       height: 32px;
@@ -73,13 +64,6 @@ html {
   height: auto;
   padding-bottom: 2rem;
   padding-top: 2rem; }
-
-#content:before {
-  margin-top: -2rem;
-  margin-bottom: 2rem;
-  display: block;
-  content: "";
-  border-color: white; }
 
 html {
   height: 100% !important;
@@ -111,6 +95,4 @@ pre {
 :target:before {
   visibility: hidden;
   display: block;
-  content: "";
-  height: 4rem;
-  margin: -4rem 0 0; }
+  content: ""; }

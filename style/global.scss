@@ -1,49 +1,38 @@
 @import 'shared';
 
 html {
-   background-image: url('https://liftforsmiles.files.wordpress.com/2014/08/18750-weight-bar-gym-workout.jpg');
+   background-image: url('https://liftforsmiles.files.wordpress.com/2014/09/315lbs-platform.jpg');
    background-attachment: fixed;
    background-size: cover;
    background-repeat: no-repeat;
    background-position: center;
 }
 
-#header, #content:before {
-   height: $headerHeight;
-   border-width: 0 0 $borderWidth 0;
-   border-style: solid;
+@mixin display-table {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+}
+
+table {
+  @include display-table;
+  td {
+    @include display-table;
+  }
 }
 
 #header {
-   position: fixed;
-   top: 0;
-   left: 0;
-   right: 0;
-   background-color: black;
-   border-color: $borderColor;
-   z-index: 1;
+   background-color: $containerBackground;
 
    * {
       margin: 0;
    }
 
    .title {
-      position: absolute;
-      top: 50%;
-      left: 1rem;
-      transform: translate(0, -50%);
-      -moz-transform: translate(0, -50%);
-      -webkit-transform: translate(0, -50%);
    }
 
    .user {
-      position: absolute;
-      top: 50%;
-      right: 1rem;
-      transform: translate(0, -50%);
-      -moz-transform: translate(0, -50%);
-      -webkit-transform: translate(0, -50%);
-
      #google-plus-signin {
         background-color: transparent;
         border: 0px;
@@ -52,21 +41,30 @@ html {
         height: 40px;
      }
    }
+   > table {
+     width: 100%;
+     td:nth-child(1) {
+       text-align: left;
+     }
+     td:nth-child(2) {
+       text-align: center;
+     }
+     td:nth-child(3) {
+       text-align: right;
+     }
+   }
 
    .page-actions {
-      position: absolute;
-      top: 50%;
-      left:50%;
-      transform: translate(-50%, -50%);
-      -moz-transform: translate(-50%, -50%);
-      -webkit-transform: translate(-50%, -50%);
-
+      white-space: nowrap;
       .page-action.hidden {
         display: none;
       }
+      .page-action:hover {
+        background-color: $colorMedium;
+      }
       .page-action {
         box-sizing: content-box;
-        border: $borderWidth solid $borderColor;
+        border: $borderWidth solid transparent;
         margin: 0 0.25rem;
         width: 32px;
         height: 32px;
@@ -93,14 +91,6 @@ html {
    height: auto;
    padding-bottom: $containerPadding;
    padding-top: $containerPadding;
-}
-
-#content:before {
-   margin-top: -$containerPadding;
-   margin-bottom: $containerPadding;
-   display: block;
-   content: "";
-   border-color: white;
 }
 
 html {
@@ -141,6 +131,4 @@ pre {
    visibility: hidden;
    display: block;
    content: "";
-   height: $headerHeight;
-   margin: -$headerHeight 0 0;
 }
