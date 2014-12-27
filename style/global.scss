@@ -8,13 +8,6 @@ html {
    background-position: center;
 }
 
-@mixin display-table {
-  border: 0;
-  margin: 0;
-  padding: 0;
-  background-color: transparent;
-}
-
 table {
   @include display-table;
   td {

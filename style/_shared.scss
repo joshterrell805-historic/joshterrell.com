@@ -9,3 +9,11 @@ $colorMedium: #400;
    background-color: $containerBackground;
    padding: $textMargin;
 }
+
+@mixin display-table {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+}
+

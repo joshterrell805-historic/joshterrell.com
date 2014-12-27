@@ -31,6 +31,37 @@ $indent: 1.5rem;
      }
      .body {
         margin: $containerPadding;
+        table {
+          thead {
+            @include display-table;
+            background-color: rgba(150,150,150,0.2);
+            tr {
+              @include display-table;
+              th {
+                @include display-table;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                color: white;
+              }
+            }
+          }
+          color: white;
+          background-color: rgba(150,150,150,0.2);
+          tr:nth-of-type(even) {
+            @include display-table;
+            background-color: rgba(150,150,150,0.2);
+          }
+          td {
+            @include display-table;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            color: white;
+          }
+          tr:nth-of-type(odd) {
+            @include display-table;
+            background-color: transparent;
+          }
+        }
      }
    }
    #editor {
