@@ -15,7 +15,11 @@
     margin-left: 3rem; }
   #content > .doc #view .body {
     margin: 2rem; }
+    #content > .doc #view .body .term {
+      color: #910;
+      font-weight: bold; }
     #content > .doc #view .body table {
+      margin-bottom: 2rem;
       color: white;
       background-color: rgba(150, 150, 150, 0.2); }
       #content > .doc #view .body table thead {

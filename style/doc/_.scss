@@ -31,7 +31,12 @@ $indent: 1.5rem;
      }
      .body {
         margin: $containerPadding;
+        .term {
+          color: #910;
+          font-weight: bold;
+        }
         table {
+          margin-bottom: $containerPadding;
           thead {
             @include display-table;
             background-color: rgba(150,150,150,0.2);
