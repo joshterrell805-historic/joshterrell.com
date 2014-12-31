@@ -35,6 +35,15 @@ $indent: 1.5rem;
           color: #910;
           font-weight: bold;
         }
+        .task-critical {
+          color: #B55;
+        }
+        .task-normal {
+          color: #888;
+        }
+        .task-stretch {
+          color: #8AA;
+        }
         table {
           margin-bottom: $containerPadding;
           thead {

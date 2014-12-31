@@ -18,6 +18,12 @@
     #content > .doc #view .body .term {
       color: #910;
       font-weight: bold; }
+    #content > .doc #view .body .task-critical {
+      color: #B55; }
+    #content > .doc #view .body .task-normal {
+      color: #888; }
+    #content > .doc #view .body .task-stretch {
+      color: #8AA; }
     #content > .doc #view .body table {
       margin-bottom: 2rem;
       color: white;
